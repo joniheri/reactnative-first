@@ -16,38 +16,96 @@ const Separator = () => <View style={styles.separator} />;
 
 export default function App(props) {
   const [text, onChangeText] = React.useState("");
-  const [number, onChangeNumber] = React.useState(null);
-  return (
-    // <View style={styles.container}>
-    //   <Text>Open up App.js to start working on your app!</Text>
-    //   <Text>Hi, I'm Jon</Text>
-    //   <Text>Im Software Enginer</Text>
-    //   <StatusBar style="auto" />
-    // </View>
+  const [number1, onChangeNumber1] = React.useState(null);
+  const [number2, onChangeNumber2] = React.useState(null);
 
+  return (
     <SafeAreaView style={styles.container}>
       <ScrollView style={styles.scrollView}>
         {/* Example Input */}
         <View style={{ marginTop: 10, marginBottom: 20 }}>
           <View style={{ marginTop: 10 }}>
-            <Text style={{ fontSize: 18 }}>Value A</Text>
+            <Text style={{ fontSize: 18 }}>Text String</Text>
             <TextInput
               style={styles.input}
               onChangeText={onChangeText}
-              value={text}
               placeholder="Enter text"
+            />
+            <TextInput
+              style={styles.inputResult}
+              onChangeText={onChangeText}
+              value={text}
+              editable={false}
+              placeholder="Result text"
+            />
+          </View>
+          <View style={{ marginTop: 10 }}>
+            <Text style={{ fontSize: 18 }}>Value A</Text>
+            <TextInput
+              style={styles.input}
+              onChangeText={onChangeNumber1}
+              value={number1}
+              placeholder="Input Value A"
+              keyboardType="numeric"
+            />
+            <TextInput
+              style={styles.inputResult}
+              onChangeText={onChangeNumber1}
+              value={number1}
+              editable={false}
+              placeholder="Result Input Value A"
             />
           </View>
           <View style={{ marginTop: 10 }}>
             <Text style={{ fontSize: 18 }}>Value B</Text>
             <TextInput
               style={styles.input}
-              onChangeText={onChangeNumber}
-              value={number}
-              placeholder="useless placeholder"
+              onChangeText={onChangeNumber2}
+              value={number2}
+              placeholder="Input Value B"
               keyboardType="numeric"
             />
+            <TextInput
+              style={styles.inputResult}
+              onChangeText={onChangeNumber2}
+              value={number2}
+              editable={false}
+              placeholder="Result Input Value B"
+            />
           </View>
+
+          {/* Test Button */}
+          <View
+            style={{
+              marginTop: 20,
+              flexDirection: "row",
+            }}
+          >
+            <View style={{ marginRight: 10, backgroundColor: "#FF5757" }}>
+              <Button
+                style={{ with: 30 }}
+                title="+"
+                onPress={() => Alert.alert("Button +")}
+              />
+            </View>
+            <View style={{ marginRight: 10 }}>
+              <Button title="-" onPress={() => Alert.alert("Button -")} />
+            </View>
+            <View style={{ marginRight: 10 }}>
+              <Button title="*" onPress={() => Alert.alert("Button *")} />
+            </View>
+            <View style={{ marginRight: 10 }}>
+              <Button title="/" onPress={() => Alert.alert("Button /")} />
+            </View>
+          </View>
+          <View style={{ marginTop: 20 }}>
+            <Button
+              style={{ marginTop: 50 }}
+              title="Button 2"
+              onPress={() => Alert.alert("Test Button 2")}
+            />
+          </View>
+          {/* End Test Button */}
         </View>
         <Separator />
         {/* End Example Input */}
@@ -147,6 +205,16 @@ const styles = StyleSheet.create({
     paddingRight: 10,
     backgroundColor: "#FFFFFF",
     fontSize: 18,
+    borderRadius: 5,
+  },
+  inputResult: {
+    height: 40,
+    marginTop: 10,
+    paddingLeft: 10,
+    paddingRight: 10,
+    backgroundColor: "#FFFFFF",
+    fontSize: 18,
+    color: "#000000",
     borderRadius: 5,
   },
   title: {
