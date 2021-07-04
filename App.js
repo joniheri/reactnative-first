@@ -81,23 +81,25 @@ export default function App(props) {
               flexDirection: "row",
             }}
           >
-            <View style={{ marginRight: 10, backgroundColor: "#FF5757" }}>
-              <Button
-                style={{ with: 30 }}
-                title="+"
-                onPress={() => Alert.alert("Button +")}
-              />
+            <View
+              style={{
+                marginRight: 10,
+                width: "17%",
+                backgroundColor: "#FF5757",
+              }}
+            >
+              <Button title="+" onPress={() => Alert.alert("Button +")} />
             </View>
-            <View style={{ marginRight: 10 }}>
+            <View style={{ marginRight: 10, width: "17%" }}>
               <Button title="-" onPress={() => Alert.alert("Button -")} />
             </View>
-            <View style={{ marginRight: 10 }}>
+            <View style={{ marginRight: 10, width: "17%" }}>
               <Button title="*" onPress={() => Alert.alert("Button *")} />
             </View>
-            <View style={{ marginRight: 10 }}>
+            <View style={{ marginRight: 10, width: "17%" }}>
               <Button title="/" onPress={() => Alert.alert("Button /")} />
             </View>
-            <View style={{ marginRight: 10 }}>
+            <View style={{ marginRight: 10, width: "17%" }}>
               <Button title="%" onPress={() => Alert.alert("Button %")} />
             </View>
           </View>
