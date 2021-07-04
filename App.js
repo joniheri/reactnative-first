@@ -97,18 +97,106 @@ export default function App(props) {
             <View style={{ marginRight: 10 }}>
               <Button title="/" onPress={() => Alert.alert("Button /")} />
             </View>
-          </View>
-          <View style={{ marginTop: 20 }}>
-            <Button
-              style={{ marginTop: 50 }}
-              title="Button 2"
-              onPress={() => Alert.alert("Test Button 2")}
-            />
+            <View style={{ marginRight: 10 }}>
+              <Button title="%" onPress={() => Alert.alert("Button %")} />
+            </View>
           </View>
           {/* End Test Button */}
         </View>
         <Separator />
         {/* End Example Input */}
+
+        {/* Dysplay Calculator */}
+        <View style={{ marginBottom: 10 }}>
+          <View style={{ marginTop: 10 }}>
+            <Text style={{ fontSize: 18, color: "#fff", fontSize: 20 }}>
+              Display
+            </Text>
+            <TextInput
+              style={styles.inputDisplayCalculator}
+              placeholder="Result"
+            />
+          </View>
+
+          <View
+            style={{
+              marginTop: 20,
+              flexDirection: "row",
+            }}
+          >
+            <View style={{ marginRight: 10, width: "20%" }}>
+              <Button title="1" onPress={() => Alert.alert("Button -")} />
+            </View>
+            <View style={{ marginRight: 10, width: "20%" }}>
+              <Button title="2" onPress={() => Alert.alert("Button -")} />
+            </View>
+            <View style={{ marginRight: 10, width: "20%" }}>
+              <Button title="-" onPress={() => Alert.alert("Button -")} />
+            </View>
+            <View style={{ marginRight: 10, width: "20%" }}>
+              <Button title="+" onPress={() => Alert.alert("Button -")} />
+            </View>
+          </View>
+          <View
+            style={{
+              marginTop: 10,
+              flexDirection: "row",
+            }}
+          >
+            <View style={{ marginRight: 10, width: "20%" }}>
+              <Button title="3" onPress={() => Alert.alert("Button -")} />
+            </View>
+            <View style={{ marginRight: 10, width: "20%" }}>
+              <Button title="4" onPress={() => Alert.alert("Button -")} />
+            </View>
+            <View style={{ marginRight: 10, width: "20%" }}>
+              <Button title="*" onPress={() => Alert.alert("Button -")} />
+            </View>
+            <View style={{ marginRight: 10, width: "20%" }}>
+              <Button title="/" onPress={() => Alert.alert("Button -")} />
+            </View>
+          </View>
+          <View
+            style={{
+              marginTop: 10,
+              flexDirection: "row",
+            }}
+          >
+            <View style={{ marginRight: 10, width: "20%" }}>
+              <Button title="5" onPress={() => Alert.alert("Button -")} />
+            </View>
+            <View style={{ marginRight: 10, width: "20%" }}>
+              <Button title="6" onPress={() => Alert.alert("Button -")} />
+            </View>
+            <View style={{ marginRight: 10, width: "20%" }}>
+              <Button title="%" onPress={() => Alert.alert("Button -")} />
+            </View>
+            <View style={{ marginRight: 10, width: "20%" }}>
+              <Button title="=" onPress={() => Alert.alert("Button -")} />
+            </View>
+          </View>
+          <View
+            style={{
+              marginTop: 10,
+              flexDirection: "row",
+            }}
+          >
+            <View style={{ marginRight: 10, width: "20%" }}>
+              <Button title="7" onPress={() => Alert.alert("Button -")} />
+            </View>
+            <View style={{ marginRight: 10, width: "20%" }}>
+              <Button title="8" onPress={() => Alert.alert("Button -")} />
+            </View>
+            <View style={{ marginRight: 10, width: "20%" }}>
+              <Button title="9" onPress={() => Alert.alert("Button -")} />
+            </View>
+            <View style={{ marginRight: 10, width: "20%" }}>
+              <Button title="0" onPress={() => Alert.alert("Button -")} />
+            </View>
+          </View>
+        </View>
+        <Separator />
+        {/* End Dysplay Calculator */}
 
         <Text style={styles.text1}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -195,8 +283,7 @@ const styles = StyleSheet.create({
     paddingTop: 20,
   },
   text1: {
-    fontSize: 42,
-    textAlign: "justify",
+    fontSize: 40,
   },
   input: {
     height: 40,
@@ -215,6 +302,16 @@ const styles = StyleSheet.create({
     backgroundColor: "#FFFFFF",
     fontSize: 18,
     color: "#000000",
+    borderRadius: 5,
+  },
+  inputDisplayCalculator: {
+    height: 100,
+    marginTop: 10,
+    paddingLeft: 10,
+    paddingRight: 10,
+    backgroundColor: "#FFFFFF",
+    fontSize: 18,
+    color: "#000",
     borderRadius: 5,
   },
   title: {
